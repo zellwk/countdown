@@ -1,7 +1,8 @@
-import timezones from './timezones'
-import tokenStrings from './tokens'
+const timezones = require('./timezones')
+const tokenStrings = require('./tokens')
 
-export default function initCountDown (countdown) {
+module.exports = function initCountdown (countdown) {
+  console.log(countdown);
   if (!countdown) throw new Error('No countdown detected')
   createCountdownChildElements(countdown)
   let targetTime = parseTargetTime(countdown)

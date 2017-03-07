@@ -1,0 +1,22 @@
+{
+  "name": "count-to-date",
+  "description": "A simple countdown timer to a specific date (with timezone support)",
+  "main": "dist/index.min.js",
+  "authors": [
+    "Zell Liew"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "countdown",
+    "js",
+    "javascript"
+  ],
+  "homepage": "https://github.com/zellwk/countdown",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

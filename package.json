@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist && mkdirp dist && rimraf src/bundle.js",
-    "babelify": "babel src/index.js -o src/bundle.js && babel src/index.js -o dist/index.js",
-    "browserify": "browserify src/bundle.js --standalone countdown | derequire > dist/countdown.js",
-    "uglify": "uglifyjs -mc < dist/countdown.js > dist/countdown.min.js",
+    "babelify": "babel src/index.js -o src/bundle.js --presets=es2015",
+    "browserify": "browserify src/bundle.js --standalone countToDate | derequire > dist/index.js",
+    "uglify": "uglifyjs -mc < dist/index.js > dist/index.min.js",
     "build": "npm run clean && npm run babelify && npm run browserify && npm run uglify",
     "prepublish": "npm run build"
   },
