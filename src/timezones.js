@@ -1,0 +1,30 @@
+// Timezones
+module.exports = {
+  lint: +14,
+  nzdt: +13,
+  anat: +12,
+  aedt: +11,
+  aest: +10,
+  jst: +9 ,
+  sgt: +8 , // SGT instead of CST since there's another CST
+  wib: +7 ,
+  bst: +6 ,
+  uzt: +5 ,
+  gst: +4 ,
+  msk: +3 ,
+  eet: +2 ,
+  cet: +1 ,
+  gmt: +0 ,
+  cvt: -1 ,
+  gst: -2 ,
+  art: -3 ,
+  vet: -4 ,
+  est: -5 ,
+  cst: -6 ,
+  mst: -7 ,
+  pst: -8 ,
+  akst: -9 ,
+  hast: -10,
+  nut: -11,
+  aoe: -12
+}

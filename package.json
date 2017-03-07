@@ -1,0 +1,25 @@
+{
+  "name": "count-to-date",
+  "version": "1.0.0",
+  "description": "A simple countdown timer to a specific date (with timezone support)",
+  "main": "dist/index.js",
+  "author": "Zell Liew",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist && rimraf src/bundle.js",
+    "babelify": "babel src/index.js -o src/bundle.js && babel src/index.js -o dist/index.js",
+    "browserify": "browserify src/bundle.js --standalone countdown | derequire > dist/countdown.js",
+    "uglify": "uglifyjs -mc < dist/countdown.js > dist/countdown.min.js",
+    "build": "npm run clean && npm run babelify && npm run browserify && npm run uglify",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "browserify": "^14.1.0",
+    "derequire": "^2.0.6",
+    "mkdirp": "^0.5.1",
+    "uglifyjs": "^2.4.10"
+  }
+}
